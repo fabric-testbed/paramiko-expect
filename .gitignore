@@ -13,3 +13,4 @@ dist
 .venv*/*
 
 prepare_test_env
+.idea/*
