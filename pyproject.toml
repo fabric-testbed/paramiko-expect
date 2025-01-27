@@ -1,0 +1,33 @@
+[build-system]
+requires = ["flit_core>=3.2"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "fabric-paramiko-expect"
+version = "1.0"
+description = "An expect-like extension for the Paramiko SSH library"
+readme = "README.rst"
+authors = [{ name = "Fotis Gimian", email = "fgimiansoftware@gmail.com" },
+            { name= "Komal Thareja", email = "komal.thareja@gmail.com"}]
+license = { file = "LICENSE" }
+requires-python = ">=3.4"
+dependencies = [
+    "paramiko>=1.10.1"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "pytest-cov",
+    "codecov",
+    "testcontainers",
+    "mock ; python_version <= '2.7'",
+    "contextlib2 ; python_version <= '3.2'"
+]
+
+[project.urls]
+Homepage = "https://github.com/fgimian/paramiko-expect"
+Repository = "https://github.com/fgimian/paramiko-expect"
+
+[tool.flit.module]
+name = "paramiko_expect"
